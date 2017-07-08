@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="backend-assemble" />
+        <module name="backend-biz" />
+        <module name="backend-integration" />
+        <module name="backend-web-biz" />
+        <module name="backend-web-common" />
+        <module name="backend-web-out" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend-assemble" target="1.8" />
+      <module name="backend-biz" target="1.8" />
+      <module name="backend-integration" target="1.8" />
+      <module name="backend-web" target="1.8" />
+      <module name="backend-web-biz" target="1.8" />
+      <module name="backend-web-common" target="1.8" />
+      <module name="backend-web-out" target="1.8" />
+      <module name="yiwanjia-backend" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

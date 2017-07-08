@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.cfca.toolkit:common:3.3.0.2-tsvo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cfca/toolkit/common/3.3.0.2-tsvo/common-3.3.0.2-tsvo.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cfca/toolkit/common/3.3.0.2-tsvo/common-3.3.0.2-tsvo-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cfca/toolkit/common/3.3.0.2-tsvo/common-3.3.0.2-tsvo-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

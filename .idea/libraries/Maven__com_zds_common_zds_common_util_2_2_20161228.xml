@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zds.common:zds-common-util:2.2.20161228">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/zds/common/zds-common-util/2.2.20161228/zds-common-util-2.2.20161228.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/zds/common/zds-common-util/2.2.20161228/zds-common-util-2.2.20161228-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/zds/common/zds-common-util/2.2.20161228/zds-common-util-2.2.20161228-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

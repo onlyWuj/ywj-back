@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.cp.boot:cp-boot-starter-jdbc:0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cp/boot/cp-boot-starter-jdbc/0.0.1-SNAPSHOT/cp-boot-starter-jdbc-0.0.1-20170307.070953-27.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cp/boot/cp-boot-starter-jdbc/0.0.1-SNAPSHOT/cp-boot-starter-jdbc-0.0.1-20170307.070953-27-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cp/boot/cp-boot-starter-jdbc/0.0.1-SNAPSHOT/cp-boot-starter-jdbc-0.0.1-20170307.070953-27-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.cfca.toolkit:etl-uaclient:3.4.4.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cfca/toolkit/etl-uaclient/3.4.4.1/etl-uaclient-3.4.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cfca/toolkit/etl-uaclient/3.4.4.1/etl-uaclient-3.4.4.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cfca/toolkit/etl-uaclient/3.4.4.1/etl-uaclient-3.4.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.cp.boot:cp-boot-core:0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cp/boot/cp-boot-core/0.0.1-SNAPSHOT/cp-boot-core-0.0.1-20170307.070950-27.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cp/boot/cp-boot-core/0.0.1-SNAPSHOT/cp-boot-core-0.0.1-20170307.070950-27-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/com/cp/boot/cp-boot-core/0.0.1-SNAPSHOT/cp-boot-core-0.0.1-20170307.070950-27-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

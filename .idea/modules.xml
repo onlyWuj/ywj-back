@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/backend-assemble/backend-assemble.iml" filepath="$PROJECT_DIR$/backend-assemble/backend-assemble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-biz/backend-biz.iml" filepath="$PROJECT_DIR$/backend-biz/backend-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-integration/backend-integration.iml" filepath="$PROJECT_DIR$/backend-integration/backend-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-web/backend-web.iml" filepath="$PROJECT_DIR$/backend-web/backend-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-web/backend-web-biz/backend-web-biz.iml" filepath="$PROJECT_DIR$/backend-web/backend-web-biz/backend-web-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-web/backend-web-common/backend-web-common.iml" filepath="$PROJECT_DIR$/backend-web/backend-web-common/backend-web-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-web/backend-web-out/backend-web-out.iml" filepath="$PROJECT_DIR$/backend-web/backend-web-out/backend-web-out.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yiwanjia-backend.iml" filepath="$PROJECT_DIR$/yiwanjia-backend.iml" />
+    </modules>
+  </component>
+</project>
