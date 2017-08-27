@@ -15,12 +15,8 @@ import com.zds.scf.biz.common.CPBusinessException;
 import com.zds.scf.biz.common.CPContext;
 import com.zds.scf.biz.common.right.domain.entity.User;
 import com.zds.scf.biz.common.right.domain.service.UserDomainService;
-import com.zds.scf.biz.pbac.domain.entity.SeUser;
 import com.zds.scf.biz.pbac.realm.CPAuthenticationToken;
-import com.zds.scf.biz.pbac.service.SeUserService;
 import com.zds.scf.web.common.model.LoginModel;
-import com.zds.scf.web.common.model.SmsValidation;
-import com.zds.scf.web.common.util.VerifyCodeUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -29,7 +25,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -66,6 +61,9 @@ public class LoginComponent {
         User user = userService.loadByCode(loginModel.getUserCode());
         if (user == null) {
             CPBusinessException.throwIt("用户不存在");
+        }
+        if (!user.getAvailable()) {
+            CPBusinessException.throwIt("用户被停用，请联系管理员");
         }
         return user;
     }

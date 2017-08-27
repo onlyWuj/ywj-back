@@ -1,33 +1,21 @@
 package com.zds.scf.biz.common.right.domain.service;
 
 import com.cp.boot.appservice.stereotype.DomainService;
-import com.google.common.collect.Lists;
 import com.zds.scf.biz.common.CPBusinessException;
-import com.zds.scf.biz.common.CPContext;
-import com.zds.scf.biz.common.dto.SimpleDetailDto;
 import com.zds.scf.biz.common.right.app.dto.user.ChangeUserPwdDto;
 import com.zds.scf.biz.common.right.app.dto.user.UserDto;
 import com.zds.scf.biz.common.right.app.dto.user.UserListDto;
 import com.zds.scf.biz.common.right.domain.entity.User;
 import com.zds.scf.biz.common.right.domain.repository.UserRepository;
-import com.zds.scf.biz.common.udc.UDC;
-
 import com.zds.scf.biz.pbac.service.PasswordHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.JoinType;
-import javax.persistence.criteria.Predicate;
-import java.util.Collections;
-import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @DomainService
 public class UserDomainService {

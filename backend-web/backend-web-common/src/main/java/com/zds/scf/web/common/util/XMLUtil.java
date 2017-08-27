@@ -1,7 +1,6 @@
 package com.zds.scf.web.common.util;
 
 
-import org.apache.commons.codec.Charsets;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;

@@ -1,8 +1,8 @@
 
 package com.zds.scf.biz.common.config;
 
-import com.zds.scf.biz.common.CPContext;
 import com.cp.boot.core.configuration.LogAutoConfiguration;
+import com.zds.scf.biz.common.CPContext;
 import org.jboss.logging.MDC;
 
 import java.util.Collection;

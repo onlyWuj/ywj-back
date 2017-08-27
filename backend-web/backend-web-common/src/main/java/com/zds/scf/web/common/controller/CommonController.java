@@ -9,36 +9,29 @@
  */
 package com.zds.scf.web.common.controller;
 
-import com.zds.common.lang.util.PasswdUtil;
 import com.zds.common.log.LoggerFactory;
-import com.zds.scf.biz.common.CPBusinessException;
 import com.zds.scf.biz.common.CPContext;
-import com.zds.scf.biz.common.component.SendSmsComponent;
-import com.zds.scf.biz.common.dto.CPViewResultInfo;
-import com.zds.scf.biz.common.dto.SmsResponseDto;
-import com.zds.scf.biz.pbac.domain.entity.SeUser;
-import com.zds.scf.biz.pbac.service.PasswordHelper;
-import com.zds.scf.biz.pbac.service.SeUserService;
-import com.zds.scf.web.common.component.DsTokenComponent;
+import com.zds.scf.biz.common.dto.UserInfoDto;
+import com.zds.scf.biz.common.dto.base.CPViewResultInfo;
+import com.zds.scf.biz.common.right.app.service.UserAppService;
+import com.zds.scf.biz.common.right.domain.entity.Resource;
+import com.zds.scf.biz.common.right.domain.entity.Role;
+import com.zds.scf.biz.common.right.domain.entity.User;
+import com.zds.scf.biz.common.right.domain.service.UserDomainService;
 import com.zds.scf.web.common.component.LoginComponent;
 import com.zds.scf.web.common.model.LoginModel;
-import com.zds.scf.web.common.model.ModifyPasswordModel;
-import com.zds.scf.web.common.model.SmsValidation;
-import com.zds.scf.web.common.model.SmsVerifyCodeModel;
 import com.zds.scf.web.common.stereotype.GetMapping;
 import com.zds.scf.web.common.stereotype.PostMapping;
 import com.zds.scf.web.common.util.VerifyCodeUtil;
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Objects;
 
 /**
  *
@@ -49,6 +42,9 @@ public class CommonController extends AbstractCommonController {
 
     @Autowired
     private LoginComponent loginComponent;
+
+    @Autowired
+    private UserDomainService userDomainService;
 
     @GetMapping("getVerifyCode")
     public void getVerifyCode(HttpServletRequest request,
@@ -95,7 +91,14 @@ public class CommonController extends AbstractCommonController {
             resultInfo.setSuccess(false);
         }else{
             resultInfo.setSuccess(true);
-            resultInfo.setData(userInfo);
+            User user = userDomainService.load(userInfo.getId());
+            UserInfoDto dto  = user.to(UserInfoDto.class);
+            for (Role role : user.getRoles()){
+                for (Resource resource : role.getResources()){
+                    dto.getMenuResKey().add(resource.getUrl());
+                }
+            }
+            resultInfo.setData(dto);
         }
         return resultInfo;
     }

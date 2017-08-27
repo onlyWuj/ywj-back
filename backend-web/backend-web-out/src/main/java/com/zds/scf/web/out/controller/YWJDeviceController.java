@@ -1,19 +1,21 @@
 package com.zds.scf.web.out.controller;
 
-import com.zds.scf.biz.common.dto.CPResponse;
-import com.zds.scf.biz.common.dto.CPSingleValueRequest;
-import com.zds.scf.biz.common.dto.CPSingleValueResponse;
-import com.zds.scf.biz.common.dto.CPViewResultInfo;
+import com.zds.scf.biz.common.CPBusinessException;
+import com.zds.scf.biz.common.dto.base.CPResponse;
+import com.zds.scf.biz.common.dto.base.CPSingleValueRequest;
+import com.zds.scf.biz.common.dto.base.CPSingleValueResponse;
+import com.zds.scf.biz.common.dto.base.CPViewResultInfo;
 import com.zds.scf.biz.ywj.app.dto.device.YWJDeviceBindDto;
 import com.zds.scf.biz.ywj.app.dto.device.YWJDeviceChangeBindDto;
-import com.zds.scf.biz.ywj.app.dto.device.YWJDeviceListDto;
 import com.zds.scf.biz.ywj.app.service.YWJDeviceAppService;
+import com.zds.scf.biz.ywj.app.service.YWJUserAppService;
 import com.zds.scf.web.common.stereotype.GetMapping;
 import com.zds.scf.web.common.stereotype.PostMapping;
 import com.zds.scf.web.out.AbstractOutController;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Administrator on 2017/5/30.
@@ -23,6 +25,8 @@ import org.springframework.web.bind.annotation.RestController;
 
     @Autowired
     private YWJDeviceAppService service;
+    @Autowired
+    private YWJUserAppService service2;
 
     @PostMapping("/ywj/device/bind.json")
     public CPViewResultInfo bind( YWJDeviceBindDto dto) {

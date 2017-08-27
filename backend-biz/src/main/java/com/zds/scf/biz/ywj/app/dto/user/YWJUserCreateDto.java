@@ -1,8 +1,7 @@
 package com.zds.scf.biz.ywj.app.dto.user;
-import com.zds.scf.biz.common.dto.BaseDto;
-import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.NotNull;
+import com.zds.scf.biz.common.dto.base.BaseDto;
+import org.hibernate.validator.constraints.NotEmpty;
 
 
 public class YWJUserCreateDto extends BaseDto {

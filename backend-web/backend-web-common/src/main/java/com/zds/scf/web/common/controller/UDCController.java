@@ -1,9 +1,9 @@
 package com.zds.scf.web.common.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.zds.scf.biz.common.dto.CPSingleValueRequest;
-import com.zds.scf.biz.common.dto.CPSingleValueResponse;
-import com.zds.scf.biz.common.dto.CPViewResultInfo;
+import com.zds.scf.biz.common.dto.base.CPSingleValueRequest;
+import com.zds.scf.biz.common.dto.base.CPSingleValueResponse;
+import com.zds.scf.biz.common.dto.base.CPViewResultInfo;
 import com.zds.scf.biz.common.udc.UDC;
 import com.zds.scf.biz.common.udc.app.dto.UDCItemDto;
 import com.zds.scf.biz.common.udc.app.service.UDCTypeAppService;

@@ -1,5 +1,5 @@
 package com.zds.scf.biz.ywj.app.dto.device;
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 
 import javax.validation.constraints.NotNull;
 
@@ -8,9 +8,12 @@ public class YWJDeviceChangeBindDto extends BaseDto {
     @NotNull
     private Long id ;
 
+    private String device;
+
     private String deviceName;
 
     private String devicePassWord;
+
 
 
     public Long getId() {
@@ -19,6 +22,14 @@ public class YWJDeviceChangeBindDto extends BaseDto {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDevice() {
+        return device;
+    }
+
+    public void setDevice(String device) {
+        this.device = device;
     }
 
     public String getDeviceName() {

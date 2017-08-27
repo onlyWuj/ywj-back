@@ -1,6 +1,6 @@
 package com.zds.scf.biz.common.report;
 
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 
 import javax.validation.constraints.NotNull;
 import java.io.ByteArrayOutputStream;

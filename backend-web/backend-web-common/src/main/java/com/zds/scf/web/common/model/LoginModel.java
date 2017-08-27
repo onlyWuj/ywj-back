@@ -9,10 +9,7 @@
  */
 package com.zds.scf.web.common.model;
 
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.constraints.NotNull;
 
 /**
  *

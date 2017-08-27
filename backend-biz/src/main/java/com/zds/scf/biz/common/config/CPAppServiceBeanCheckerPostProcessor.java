@@ -1,11 +1,11 @@
 
 package com.zds.scf.biz.common.config;
 
-import com.zds.scf.biz.common.dto.CPRequest;
-import com.zds.scf.biz.common.dto.CPResponse;
 import com.cp.boot.appservice.AppService;
 import com.cp.boot.core.Apps;
 import com.zds.common.lang.exception.SystemException;
+import com.zds.scf.biz.common.dto.base.CPRequest;
+import com.zds.scf.biz.common.dto.base.CPResponse;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

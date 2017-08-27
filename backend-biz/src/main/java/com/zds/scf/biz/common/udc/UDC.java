@@ -2,11 +2,11 @@
 package com.zds.scf.biz.common.udc;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.google.common.base.Strings;
+import com.zds.common.spring.ApplicationContextHolder;
 import com.zds.scf.biz.common.udc.biz.UDCService;
 import com.zds.scf.biz.common.udc.domain.entity.UDCItem;
 import com.zds.scf.biz.common.udc.domain.entity.UDCType;
-import com.google.common.base.Strings;
-import com.zds.common.spring.ApplicationContextHolder;
 import org.springframework.util.Assert;
 
 import javax.annotation.Nonnull;

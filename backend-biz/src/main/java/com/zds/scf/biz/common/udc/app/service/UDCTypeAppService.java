@@ -1,12 +1,12 @@
 package com.zds.scf.biz.common.udc.app.service;
 
+import com.cp.boot.appservice.AppService;
 import com.zds.scf.biz.common.domain.entity.BaseEntity;
-import com.zds.scf.biz.common.dto.CPSingleValueRequest;
-import com.zds.scf.biz.common.dto.CPSingleValueResponse;
+import com.zds.scf.biz.common.dto.base.CPSingleValueRequest;
+import com.zds.scf.biz.common.dto.base.CPSingleValueResponse;
 import com.zds.scf.biz.common.udc.app.dto.UDCItemDto;
 import com.zds.scf.biz.common.udc.domain.entity.UDCItem;
 import com.zds.scf.biz.common.udc.domain.service.UDCTypeDomainService;
-import com.cp.boot.appservice.AppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

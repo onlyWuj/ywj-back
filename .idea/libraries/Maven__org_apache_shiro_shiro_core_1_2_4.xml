@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../../env/maven/repository/org/apache/shiro/shiro-core/1.2.4/shiro-core-1.2.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/shiro-core-1.2.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

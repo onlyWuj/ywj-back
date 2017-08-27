@@ -1,9 +1,8 @@
 package com.zds.scf.biz.ywj.app.dto.report;
 
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,7 +14,7 @@ public class DayPerHourDto extends BaseDto {
 
     public DayPerHourDto(){
        hours = new HashMap();
-       for(int i =0 ; i<23 ;i++){
+       for(int i =0 ; i<24 ;i++){
            hours.put(String.valueOf(i),0L);
        }
         hourPeriod = new HashMap();
@@ -36,7 +35,12 @@ public class DayPerHourDto extends BaseDto {
         }
         long sum = 0;
         for(int i = startHour ; i<endHour ;i++){
-            sum+=hours.get(String.valueOf(i));
+            try {
+                sum+=hours.get(String.valueOf(i));
+            }catch (NullPointerException e){
+                e.printStackTrace();
+            }
+
         }
         hourPeriod.put(period,sum);
     }

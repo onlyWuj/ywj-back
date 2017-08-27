@@ -1,5 +1,5 @@
 package com.zds.scf.biz.ywj.app.dto.user;
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 import org.hibernate.validator.constraints.NotEmpty;
 
 

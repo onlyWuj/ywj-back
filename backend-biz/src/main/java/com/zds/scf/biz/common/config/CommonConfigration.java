@@ -2,18 +2,13 @@
 package com.zds.scf.biz.common.config;
 
 import com.alibaba.fastjson.parser.ParserConfig;
+import com.cp.boot.core.Apps;
+import com.google.common.base.Splitter;
 import com.zds.scf.biz.common.convert.DateConverter;
-import com.zds.scf.biz.common.event.EventBus;
 import com.zds.scf.biz.common.event.EventHandler;
 import com.zds.scf.biz.common.udc.StringToUDCConverter;
 import com.zds.scf.biz.common.udc.UDC;
 import com.zds.scf.biz.common.udc.UDCDeserializer;
-import com.cp.boot.core.Apps;
-import com.google.common.base.Splitter;
-import net.engio.mbassy.bus.config.BusConfiguration;
-import net.engio.mbassy.bus.config.Feature;
-import net.engio.mbassy.bus.config.IBusConfiguration;
-import net.engio.mbassy.bus.error.IPublicationErrorHandler;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -23,7 +18,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.type.filter.AssignableTypeFilter;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import javax.annotation.PostConstruct;
 

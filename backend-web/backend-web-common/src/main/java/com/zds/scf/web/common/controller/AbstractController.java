@@ -10,8 +10,6 @@
 package com.zds.scf.web.common.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
 /**
  *
  */

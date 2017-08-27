@@ -2,10 +2,9 @@ package com.zds.scf.biz.common.right.app.service;
 
 import com.cp.boot.appservice.AppService;
 import com.zds.scf.biz.common.domain.entity.BaseEntity;
-import com.zds.scf.biz.common.dto.CPResponse;
-import com.zds.scf.biz.common.dto.CPSingleValueRequest;
-import com.zds.scf.biz.common.dto.CPSingleValueResponse;
-import com.zds.scf.biz.common.report.ReportService;
+import com.zds.scf.biz.common.dto.base.CPResponse;
+import com.zds.scf.biz.common.dto.base.CPSingleValueRequest;
+import com.zds.scf.biz.common.dto.base.CPSingleValueResponse;
 import com.zds.scf.biz.common.right.app.dto.role.RoleDto;
 import com.zds.scf.biz.common.right.app.dto.role.RoleListDto;
 import com.zds.scf.biz.common.right.domain.entity.Role;

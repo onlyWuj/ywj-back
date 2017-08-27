@@ -2,10 +2,8 @@ package com.zds.scf.biz.ywj.domain.service;
 
 import com.cp.boot.appservice.stereotype.DomainService;
 import com.zds.scf.biz.common.CPBusinessException;
-import com.zds.scf.biz.ywj.app.dto.user.YWJUserChangePwdDto;
-import com.zds.scf.biz.ywj.app.dto.user.YWJUserCreateDto;
-import com.zds.scf.biz.ywj.app.dto.user.YWJUserListDto;
-import com.zds.scf.biz.ywj.app.dto.user.YWJUserLoginDto;
+import com.zds.scf.biz.ywj.app.dto.user.*;
+import com.zds.scf.biz.ywj.app.service.sms.VerifyService;
 import com.zds.scf.biz.ywj.domain.entity.YWJUser;
 import com.zds.scf.biz.ywj.domain.repository.YWJUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +19,9 @@ public class YWJUserDomainService {
 
     @Autowired
     private YWJUserRepository repository;
+
+    @Autowired
+    private VerifyService verifyService;
 
     @Value("${home.user.initPwd}")
     String initPwd;
@@ -56,6 +57,21 @@ public class YWJUserDomainService {
         user.setPassWord(dto.getNewPassword());
     }
 
+    @CachePut(value ="ywj_user",key = "#dto.phone")
+    public void verifyCodeChangePwd(YWJUserVerifyCodeChangePwdDto dto) {
+        //1. 加载领域对象
+        YWJUser user = repository.findByPhone(dto.getPhone());
+        if (Objects.isNull(user)) {
+            CPBusinessException.throwIt("用户不存在!");
+        }
+        if (!dto.getNewPassword().equals(dto.getConfirmPassword())) {
+            CPBusinessException.throwIt("两次输入密码不一致!");
+        }
+
+        verifyService.verifyCode(dto.getPhone(),dto.getVerifyCode());
+        user.setPassWord(dto.getNewPassword());
+    }
+
     @CachePut(value ="ywj_user",key = "#phone")
     public void resetPwd(String phone) {
         YWJUser user = repository.findByPhone(phone);
@@ -70,6 +86,10 @@ public class YWJUserDomainService {
         return repository.findByPhone(phone);
     }
 
+    public Page<YWJUser> pagination(YWJUserListDto listParamDto) {
+        return repository.findAll((Specification<YWJUser>) listParamDto.createSpecification(), listParamDto.toPage());
+    }
+
     public void login(YWJUserLoginDto dto) {
         YWJUser userInDB = repository.findByPhone(dto.getPhone());
         if(Objects.isNull(userInDB)){
@@ -80,9 +100,11 @@ public class YWJUserDomainService {
         }
     }
 
-    public Page<YWJUser> pagination(YWJUserListDto listParamDto) {
-        return repository.findAll((Specification<YWJUser>) listParamDto.createSpecification(), listParamDto.toPage());
+    public void smsLogin(YWJUserSMSLoginDto dto) {
+        YWJUser userInDB = repository.findByPhone(dto.getPhone());
+        if(Objects.isNull(userInDB)){
+            CPBusinessException.throwIt("用户账号不存在!");
+        }
+        verifyService.verifyCode(dto.getPhone(),dto.getVerifyCode());
     }
-
-
 }

@@ -1,11 +1,11 @@
 
 package com.zds.scf.biz.common.udc.biz;
 
-import com.zds.scf.biz.common.udc.domain.entity.UDCType;
-import com.zds.scf.biz.common.udc.domain.repository.UDCTypeRepository;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.zds.common.lang.exception.SystemException;
+import com.zds.scf.biz.common.udc.domain.entity.UDCType;
+import com.zds.scf.biz.common.udc.domain.repository.UDCTypeRepository;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

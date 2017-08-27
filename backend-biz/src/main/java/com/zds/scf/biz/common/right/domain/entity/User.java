@@ -1,13 +1,14 @@
 package com.zds.scf.biz.common.right.domain.entity;
 
 import com.google.common.base.Strings;
-import com.zds.scf.biz.common.CPBusinessException;
 import com.zds.scf.biz.common.domain.entity.AggEntity;
-import com.zds.scf.biz.common.right.domain.repository.ResourceRepository;
 import com.zds.scf.biz.common.right.domain.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

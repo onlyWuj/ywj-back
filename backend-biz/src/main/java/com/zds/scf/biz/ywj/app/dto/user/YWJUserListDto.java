@@ -1,9 +1,8 @@
 package com.zds.scf.biz.ywj.app.dto.user;
+
 import com.google.common.collect.Lists;
 import com.zds.common.util.StringUtils;
-import com.zds.scf.biz.common.dto.BaseDto;
-import com.zds.scf.biz.common.dto.PageDto;
-import org.hibernate.validator.constraints.NotEmpty;
+import com.zds.scf.biz.common.dto.pub.PageDto;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.Predicate;

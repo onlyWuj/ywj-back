@@ -1,10 +1,7 @@
 package com.zds.scf.biz.common.right.app.dto.user;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.zds.scf.biz.common.dto.BaseDto;
-import com.zds.scf.biz.common.dto.PageDto;
-import com.zds.scf.biz.common.dto.SimpleDetailDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 import com.zds.scf.biz.common.right.app.dto.role.RoleDto;
-import com.zds.scf.biz.common.udc.UDC;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;

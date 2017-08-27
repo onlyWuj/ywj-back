@@ -2,14 +2,11 @@ package com.zds.scf.biz.common.right.app.dto.role;
 
 
 import com.google.common.collect.Lists;
-import com.zds.scf.biz.common.CPContext;
-import com.zds.scf.biz.common.dto.PageDto;
+import com.zds.scf.biz.common.dto.pub.PageDto;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Predicate;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +50,7 @@ public class RoleListDto extends PageDto {
 
         Specification<?> typeSpecification = (root, query, cb) -> {
             List<Predicate> predicates = Lists.newArrayListWithCapacity(4);
-
+            predicates.add(cb.notEqual(root.get("code"), "admin"));
             if (StringUtils.isNotBlank(this.getName())) {
                 predicates.add(cb.like(root.get("name"), "%" + this.getName() + "%"));
             }

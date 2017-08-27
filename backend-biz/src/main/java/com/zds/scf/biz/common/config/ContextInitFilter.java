@@ -1,11 +1,11 @@
 
 package com.zds.scf.biz.common.config;
 
-import com.zds.scf.biz.common.CPContext;
-import com.zds.scf.biz.common.dto.CPRequest;
 import com.cp.boot.appservice.filter.AppServiceContext;
 import com.cp.boot.filterchain.Filter;
 import com.cp.boot.filterchain.FilterChain;
+import com.zds.scf.biz.common.CPContext;
+import com.zds.scf.biz.common.dto.base.CPRequest;
 
 /**
  *

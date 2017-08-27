@@ -1,10 +1,7 @@
 
 package com.zds.scf.biz.common;
 
-import com.zds.scf.biz.common.udc.UDC;
-
 import java.io.Serializable;
-import java.util.List;
 
 /**
  *
@@ -17,8 +14,6 @@ public class CPContext {
     };
 
     private String gid;
-
-    private Long merchantId;
 
     private UserInfo userInfo;
 
@@ -87,43 +82,4 @@ public class CPContext {
         }
     }
 
-   /* public static class UserInfo implements Serializable {
-        private Long id;
-        private String code;
-        private String name;
-        private UDC level;
-
-        public Long getId() {
-            return id;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
-
-        public String getCode() {
-            return code;
-        }
-
-        public void setCode(String code) {
-            this.code = code;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public UDC getLevel() {
-            return level;
-        }
-
-        public void setLevel(UDC level) {
-            this.level = level;
-        }
-
-    }*/
 }

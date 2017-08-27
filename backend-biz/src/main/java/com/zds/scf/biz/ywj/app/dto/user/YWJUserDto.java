@@ -1,8 +1,8 @@
 package com.zds.scf.biz.ywj.app.dto.user;
+
 import com.alibaba.fastjson.annotation.JSONField;
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 import com.zds.scf.biz.ywj.app.dto.device.YWJDeviceDto;
-import com.zds.scf.biz.ywj.domain.entity.YWJDevice;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;

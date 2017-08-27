@@ -15,7 +15,6 @@ import com.zds.scf.biz.common.right.domain.entity.Role;
 import com.zds.scf.biz.common.right.domain.entity.User;
 import com.zds.scf.biz.common.right.domain.service.UserDomainService;
 import com.zds.scf.biz.pbac.ex.CPAuthenticationException;
-import com.zds.scf.biz.pbac.service.SeUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

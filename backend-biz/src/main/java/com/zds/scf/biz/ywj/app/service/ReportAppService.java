@@ -1,8 +1,8 @@
 package com.zds.scf.biz.ywj.app.service;
 
 import com.cp.boot.appservice.AppService;
-import com.zds.scf.biz.common.dto.CPSingleValueRequest;
-import com.zds.scf.biz.common.dto.CPSingleValueResponse;
+import com.zds.scf.biz.common.dto.base.CPSingleValueRequest;
+import com.zds.scf.biz.common.dto.base.CPSingleValueResponse;
 import com.zds.scf.biz.common.log.app.service.LogPubService;
 import com.zds.scf.biz.ywj.app.dto.report.*;
 import com.zds.scf.biz.ywj.domain.entity.report.*;
@@ -10,7 +10,10 @@ import com.zds.scf.biz.ywj.domain.service.ReportDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/6/19.

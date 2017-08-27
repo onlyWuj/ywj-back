@@ -14,7 +14,7 @@ import java.util.List;
  *
  */
 @Configuration
-@EnableConfigurationProperties({ CommonProperties.class,WeChatProperties.class })
+@EnableConfigurationProperties({ CommonProperties.class })
 public class WebConfigration extends WebMvcConfigurerAdapter {
 
     @Bean

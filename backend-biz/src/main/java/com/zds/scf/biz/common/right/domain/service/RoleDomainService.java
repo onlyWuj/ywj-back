@@ -1,20 +1,25 @@
 package com.zds.scf.biz.common.right.domain.service;
 
 import com.cp.boot.appservice.stereotype.DomainService;
+import com.google.common.collect.Lists;
 import com.zds.scf.biz.common.CPBusinessException;
-import com.zds.scf.biz.common.dto.ListParamDto;
 import com.zds.scf.biz.common.right.app.dto.role.RoleDto;
 import com.zds.scf.biz.common.right.app.dto.role.RoleListDto;
 import com.zds.scf.biz.common.right.domain.entity.Role;
 import com.zds.scf.biz.common.right.domain.repository.RoleRepository;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.List;
+import java.util.Objects;
 
 @DomainService
 public class RoleDomainService {
@@ -71,6 +76,14 @@ public class RoleDomainService {
 
 
     public List<Role> list() {
-        return repository.findAll();
+        return repository.findAll(new Specification() {
+            @Override
+            public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder cb) {
+                List<Predicate> predicates = Lists.newArrayListWithCapacity(2);
+                predicates.add(cb.notEqual(root.get("code"), "admin"));
+                predicates.add(cb.equal(root.get("available"),true));
+                return cb.and(predicates.toArray(new Predicate[predicates.size()]));
+            }
+        });
     }
 }

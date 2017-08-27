@@ -1,6 +1,5 @@
 package com.zds.scf.biz.common.right.domain.entity;
 
-import com.zds.scf.biz.common.CPBusinessException;
 import com.zds.scf.biz.common.domain.entity.BaseEntity;
 
 import javax.persistence.Column;

@@ -1,8 +1,8 @@
 package com.zds.scf.web.common.util;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.lang3.StringUtils;
+
+import javax.servlet.http.HttpServletRequest;
 
 public class WebUtil {
     public static String getBaseUrlWithContextPath(HttpServletRequest request) {

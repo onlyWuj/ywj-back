@@ -1,17 +1,13 @@
 package com.zds.scf.web.controller;
 
 
-import com.zds.scf.biz.common.dto.CPResponse;
-import com.zds.scf.biz.common.dto.CPSingleValueRequest;
-import com.zds.scf.biz.common.dto.CPSingleValueResponse;
-import com.zds.scf.biz.common.dto.CPViewResultInfo;
+import com.zds.scf.biz.common.dto.base.CPSingleValueRequest;
+import com.zds.scf.biz.common.dto.base.CPSingleValueResponse;
+import com.zds.scf.biz.common.dto.base.CPViewResultInfo;
 import com.zds.scf.biz.ywj.app.dto.report.*;
-import com.zds.scf.biz.ywj.app.dto.user.YWJUserListDto;
 import com.zds.scf.biz.ywj.app.service.ReportAppService;
-import com.zds.scf.biz.ywj.app.service.YWJUserAppService;
 import com.zds.scf.web.AbstractBackendController;
 import com.zds.scf.web.common.stereotype.GetMapping;
-import com.zds.scf.web.common.stereotype.PostMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 

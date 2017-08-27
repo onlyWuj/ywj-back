@@ -1,6 +1,6 @@
 package com.zds.scf.biz.ywj.app.dto.device;
 import com.google.common.collect.Lists;
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.Predicate;

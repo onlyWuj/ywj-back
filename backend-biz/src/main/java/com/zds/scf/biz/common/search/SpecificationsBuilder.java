@@ -4,18 +4,13 @@ package com.zds.scf.biz.common.search;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 import com.zds.common.lang.exception.Exceptions;
 import org.springframework.data.jpa.domain.Specifications;
-import org.springframework.util.ReflectionUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 /**
  *

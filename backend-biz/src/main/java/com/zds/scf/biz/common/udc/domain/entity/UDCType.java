@@ -1,11 +1,9 @@
 
 package com.zds.scf.biz.common.udc.domain.entity;
 
-import com.google.common.collect.Lists;
-import com.google.common.util.concurrent.ListenableScheduledFuture;
+import com.zds.common.util.ToString;
 import com.zds.scf.biz.common.domain.entity.AggEntity;
 import com.zds.scf.biz.common.udc.domain.repository.UDCItemRepository;
-import com.zds.common.util.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 

@@ -1,11 +1,5 @@
 package com.zds.scf.biz.common.log.app.dto;
 
-import com.zds.scf.biz.common.domain.entity.BaseEntity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Table;
 import java.util.Date;
 
 public class LogDto  {

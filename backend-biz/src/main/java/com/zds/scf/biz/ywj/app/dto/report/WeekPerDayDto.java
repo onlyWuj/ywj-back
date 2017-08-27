@@ -1,9 +1,6 @@
 package com.zds.scf.biz.ywj.app.dto.report;
 
-import com.zds.scf.biz.common.dto.BaseDto;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 
 /**
  * Created by Administrator on 2017/6/19.

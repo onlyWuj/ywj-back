@@ -1,8 +1,7 @@
 package com.zds.scf.biz.ywj.domain.entity;
 
-import com.zds.scf.biz.common.CPBusinessException;
-import com.zds.scf.biz.common.domain.entity.AggEntity;
 import com.zds.scf.biz.common.domain.entity.BaseEntity;
+import com.zds.scf.biz.ywj.domain.entity.device.YWJDevice;
 import com.zds.scf.biz.ywj.domain.repository.YWJDeviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 

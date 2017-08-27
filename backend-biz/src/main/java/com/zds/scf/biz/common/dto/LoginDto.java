@@ -9,9 +9,8 @@
  */
 package com.zds.scf.biz.common.dto;
 
+import com.zds.scf.biz.common.dto.base.BaseDto;
 import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.constraints.NotNull;
 
 /**
  *

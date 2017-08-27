@@ -183,10 +183,10 @@ public class CPACLFilter extends OncePerRequestFilter {
         private CPACLFilter filter = null;
 
          public Builder() {
+             this.filter = new CPACLFilter();
         }
-         public Builder filter(CPACLFilter filter) {
+         public Builder (CPACLFilter filter) {
              this.filter = filter;
-            return this;
         }
 
         /**
@@ -231,9 +231,7 @@ public class CPACLFilter extends OncePerRequestFilter {
             Assert.notNull(supportUserType);
 
             CPACLFilter filter = this.filter;
-            if (filter == null) {
-                filter = new CPACLFilter();
-            }
+
             filter.setLoginUrl(loginUrl);
             filter.setHomeUrl(homeUrl);
             filter.setNotNeedLoginUrls(notNeedLoginUrls);

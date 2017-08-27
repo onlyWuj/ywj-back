@@ -11,7 +11,6 @@ package com.zds.scf.biz.pbac.realm;
 
 import com.zds.scf.biz.common.right.domain.service.UserDomainService;
 import com.zds.scf.biz.pbac.ex.CPAuthenticationException;
-import com.zds.scf.biz.pbac.service.SeUserService;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;

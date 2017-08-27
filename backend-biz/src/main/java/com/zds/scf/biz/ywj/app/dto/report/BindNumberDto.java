@@ -1,6 +1,6 @@
 package com.zds.scf.biz.ywj.app.dto.report;
 
-import com.zds.scf.biz.common.dto.BaseDto;
+import com.zds.scf.biz.common.dto.base.BaseDto;
 
 /**
  * Created by Administrator on 2017/6/25.

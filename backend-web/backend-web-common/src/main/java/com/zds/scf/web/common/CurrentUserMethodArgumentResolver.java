@@ -9,9 +9,7 @@
  */
 package com.zds.scf.web.common;
 
-import com.zds.scf.biz.common.CPContext;
 import com.zds.scf.biz.common.right.domain.service.UserDomainService;
-import com.zds.scf.biz.pbac.service.SeUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;

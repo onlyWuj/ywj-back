@@ -1,9 +1,8 @@
 package com.zds.scf.biz.common.right.app.dto.role;
 
 
-import com.zds.scf.biz.common.dto.PageDto;
+import com.zds.scf.biz.common.dto.pub.PageDto;
 import com.zds.scf.biz.common.right.app.dto.resource.ResourceDto;
-import com.zds.scf.biz.common.right.domain.entity.Resource;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;

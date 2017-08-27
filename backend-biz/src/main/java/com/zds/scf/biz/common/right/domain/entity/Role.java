@@ -1,7 +1,6 @@
 package com.zds.scf.biz.common.right.domain.entity;
 
 import com.google.common.base.Strings;
-import com.zds.scf.biz.common.CPBusinessException;
 import com.zds.scf.biz.common.domain.entity.BaseEntity;
 import com.zds.scf.biz.common.right.domain.repository.ResourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +23,13 @@ public class Role extends BaseEntity {
     @Column(name = "name", columnDefinition = "varchar(50) NOT NULL comment '角色名'")
     private String name;
 
-    @Column(name = "code", columnDefinition = "varchar(50) DEFAULT NULL comment '角色编码'")
+    @Column(name = "code", columnDefinition = "varchar(50) DEFAULT NULL comment '角色编码'",unique = true)
     private String code;
 
     @Column(name = "available", columnDefinition = "boolean DEFAULT NULL comment '是否可用'")
     private Boolean available = true;
 
-    @Column(name = "resources", columnDefinition = "varchar(80) NOT NULL comment '拥有资源'")
+    @Column(name = "resources", columnDefinition = "varchar(80) comment '拥有资源'")
     private String resourceID;
 
     private transient List<Resource> resources;

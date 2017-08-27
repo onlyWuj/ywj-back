@@ -1,7 +1,7 @@
 package com.zds.scf.biz.common.udc.app.dto;
 
-import com.zds.scf.biz.common.dto.PageDto;
 import com.zds.common.service.CRequestCheckException;
+import com.zds.scf.biz.common.dto.pub.PageDto;
 
 import javax.validation.constraints.NotNull;
 

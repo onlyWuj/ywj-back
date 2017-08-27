@@ -1,17 +1,15 @@
 
 package com.zds.scf.biz.common.domain.entity;
 
-import com.zds.common.util.StringUtils;
-import com.zds.scf.biz.common.CPContext;
-import com.zds.scf.biz.common.udc.UDC;
-import com.zds.scf.biz.common.udc.UDCUserType;
-import com.zds.scf.biz.common.util.Pages;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.zds.common.lang.beans.Copier;
 import com.zds.common.lang.exception.Exceptions;
 import com.zds.common.spring.ApplicationContextHolder;
 import com.zds.common.util.ToString;
+import com.zds.scf.biz.common.udc.UDC;
+import com.zds.scf.biz.common.udc.UDCUserType;
+import com.zds.scf.biz.common.util.Pages;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
@@ -20,9 +18,15 @@ import org.springframework.beans.factory.support.AbstractBeanFactory;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.data.domain.Page;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  *
